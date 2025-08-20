@@ -1,0 +1,106 @@
+/* 基本設定 */
+:root{
+  --bg:  #BABAB5;         /* 背景 */
+  --ink: ##2D2E1A;        /* 文字 */
+  --paper: #BABAB5;      /* 背景2 */
+  --accent: #3b5d45;     /* 抹茶綠 */
+  --brand: #3b5d45;
+  --border: #444;        /* 灰色邊框 */
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height:1.6;
+}
+
+/* 容器 */
+.container{width:min(1100px, 92%); margin-inline:auto}
+
+/* Header */
+.site-header {
+	align-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* 讓 Header 佔滿整個寬度 */
+    z-index: 1000; /* 保證在最上層 */
+    background: #000;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.site-footer .container {
+  text-align: center;  /* 讓內容水平置中 */
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: center;  /* 水平置中 */
+  align-items: center;      /* 垂直置中 */
+}
+
+
+.brand{
+  align-content: center; font-weight:800; letter-spacing:.5px; text-decoration:none; color:var(--accent); font-size:1.1rem;
+  padding:6px 8px; border:2px solid var(--accent); border-radius:8px;
+}
+.main-nav ul{display:flex; gap:20px; list-style:none; margin:0; padding:0}
+.main-nav a{color:#fff; text-decoration:none; padding:6px 2px}
+.main-nav a:hover, .main-nav a:focus{outline:none; border-bottom:2px solid var(--accent)}
+.menu-toggle{display:none; background:transparent; border:0; color:#fff; font-size:1.4rem}
+
+/* Hero 區 */
+.hero{
+  position:relative; isolation:isolate;
+  min-height:54vh; display:grid; place-items:center;
+  border-block: 4px solid var(--accent);
+  margin-block: 0 24px;
+}
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.hero-inner img {
+  max-width: 400px;
+  height: auto;
+  margin-right: 20px;
+}
+.hero-text { max-width: 500px; }
+.hero-title{ color: var(--accent); }
+
+/* 按鈕 */
+.btn{
+  display:inline-block; padding:12px 18px; border:2px solid var(--accent); border-radius:12px;
+  text-decoration:none; color:var(--accent); font-weight:700;
+}
+.btn:hover{transform:translateY(-2px); background: var(--accent); color:#000;}
+
+/* 卡片區 */
+.card a {
+  color: #3b5d45; /* 抹茶綠 */
+  font-weight: bold;
+}
+
+.card a:hover {
+  color: #6ba17a;
+}
+
+
+.cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-bottom: 40px;
+}
+.card{
+	text-align: center;
+  grid-column: span 12;
+  background:#BABAB5; color: #;
+  border:2px solid var(--border); border-radius:16px;
