@@ -104,3 +104,41 @@ body{
   grid-column: span 12;
   background:#BABAB5; color: #;
   border:2px solid var(--border); border-radius:16px;
+
+/* RWD 響應式設定 */
+@media (max-width: 768px) {
+  /* Hero 區改成直式排列 */
+  .hero-inner {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-inner img {
+    max-width: 80%;   /* 不固定 400px，改為相對大小 */
+    margin: 0 0 20px 0;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  /* header 的 brand 字體調小 */
+  .brand {
+    font-size: 1rem;
+    padding: 4px 6px;
+  }
+}
+
+/* 卡片區在大螢幕改多欄 */
+@media (min-width: 769px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 桌機兩欄 */
+  }
+}
+
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr); /* 更大螢幕三欄 */
+  }
+}
